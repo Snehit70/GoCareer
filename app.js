@@ -16,6 +16,10 @@ const routes = require("./routes");
 // Initialize Express app
 const app = express();
 
+// Trust proxy for deployments behind reverse proxies (Vercel, AWS, etc.)
+// Required for express-rate-limit to correctly identify users via X-Forwarded-For header
+app.set('trust proxy', 1);
+
 // Set up middleware
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: false }));
