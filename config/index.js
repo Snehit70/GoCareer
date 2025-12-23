@@ -25,7 +25,7 @@ module.exports = {
   // API configuration
   api: {
     googleApiKey: process.env.GOOGLE_API_KEY,
-    geminiModel: "gemini-2.0-flash",
+    geminiModel: "gemini-2.5-flash",
   },
 
   // Rate limiting configuration
